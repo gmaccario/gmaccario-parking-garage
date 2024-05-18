@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./
+    tty: true
+    restart: unless-stopped
+    container_name: 'parking-garage'
+    volumes:
+      - './:/app/'
